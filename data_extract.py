@@ -3,7 +3,7 @@
 """
 Created on Fri May 10 19:43:41 2019
 
-@author: 
+@author: anthonycamper but mostly \/
 @author: Code from ronaldeddings
 """
 #GOALS
@@ -34,7 +34,6 @@ from tkinter import *
 #data_folder = Path("data/")
 #pcap_file = data_folder / "wrccdc2012.pcap" 
 #pcap_file = ("data/wrccdc2012.pcap")
-pbar = ProgressBar()
 
 root = Tk()
 root.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("pcap","*.pcap"),("all files","*.*")))
@@ -65,6 +64,7 @@ udp_fields = [field.name for field in UDP().fields_desc]
 dataframe_fields = ip_fields + ['time'] + tcp_fields + ['payload','payload_raw','payload_hex']
 
 # Create blank DataFrame
+pbar = ProgressBar()
 df = pd.DataFrame(columns=dataframe_fields)
 for packet in pbar(ourpcap[IP]):
     # Field array for each row of DataFrame

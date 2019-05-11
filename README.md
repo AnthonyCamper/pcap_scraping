@@ -1,17 +1,17 @@
 # pcap_scrapping
 
-Scripts for the processing of PCAPs using
-python scripts using scapy + opencv to process pcaps
+Scripts for the processing of PCAPs using scapy + opencv + pandas
 
 
 ### Prerequisites
+```
 scapy       -- pcap processing 
 pandas      -- dataframe
 binascii 
 pathlib
 progressbar -- Provides visual justification to upgrade hardware
 tkinter     -- because why not
-
+```
 ### How-To
 I would recommend to put pcap into data folder
 Select the file, then it automatically runs... sorry
